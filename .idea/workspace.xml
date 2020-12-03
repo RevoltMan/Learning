@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d18c1e8-c412-400a-8f5a-0a26332a9802" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Json/TestCat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Learning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/tetris/Field.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Figure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/tetris/Figure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Tetris.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/tetris/Tetris.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tetris/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tetris/Figure.java" afterDir="false" />
-    </list>
+    <list default="true" id="9d18c1e8-c412-400a-8f5a-0a26332a9802" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

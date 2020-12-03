@@ -25,10 +25,13 @@ public class TestCat {
 
     @JsonAutoDetect
     public static class Cat {
+        @JsonProperty("wildAnimal")
         public String name;
 
+        @JsonIgnore
         public int age;
 
+        @JsonProperty("over")
         public int weight;
 
         Cat() {

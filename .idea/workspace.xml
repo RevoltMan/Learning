@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d18c1e8-c412-400a-8f5a-0a26332a9802" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Json/FromFileToClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Json/ConvertClasss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,8 +64,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
-    <configuration name="TestCat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Json.TestCat" />
+    <configuration name="ConvertClasss" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Json.ConvertClasss" />
       <module name="Learning" />
       <extension name="coverage">
         <pattern>
@@ -79,7 +79,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestCat" />
+        <item itemvalue="Application.ConvertClasss" />
       </list>
     </recent_temporary>
   </component>
@@ -109,6 +109,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="254" y="234" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607004775318">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="254" y="234" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.1160@0.0.1600.1160" timestamp="1607004775318" />
     <state x="605" y="280" key="#com.intellij.ide.util.MemberChooser" timestamp="1606980676029">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
@@ -117,25 +121,52 @@
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
     <state x="506" y="314" key="FileChooserDialogImpl/0.0.1600.1160@0.0.1600.1160" timestamp="1606989309297" />
-    <state width="1556" height="317" key="GridCell.Tab.0.bottom" timestamp="1607002837106">
+    <state width="1556" height="390" key="GridCell.Tab.0.bottom" timestamp="1607007941920">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="317" key="GridCell.Tab.0.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1607002837106" />
-    <state width="1556" height="317" key="GridCell.Tab.0.center" timestamp="1607002837106">
+    <state width="1556" height="390" key="GridCell.Tab.0.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1607007941920" />
+    <state width="1556" height="390" key="GridCell.Tab.0.center" timestamp="1607007941920">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="317" key="GridCell.Tab.0.center/0.0.1600.1160@0.0.1600.1160" timestamp="1607002837106" />
-    <state width="1556" height="317" key="GridCell.Tab.0.left" timestamp="1607002837106">
+    <state width="1556" height="390" key="GridCell.Tab.0.center/0.0.1600.1160@0.0.1600.1160" timestamp="1607007941920" />
+    <state width="1556" height="390" key="GridCell.Tab.0.left" timestamp="1607007941920">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="317" key="GridCell.Tab.0.left/0.0.1600.1160@0.0.1600.1160" timestamp="1607002837106" />
-    <state width="1556" height="317" key="GridCell.Tab.0.right" timestamp="1607002837106">
+    <state width="1556" height="390" key="GridCell.Tab.0.left/0.0.1600.1160@0.0.1600.1160" timestamp="1607007941920" />
+    <state width="1556" height="390" key="GridCell.Tab.0.right" timestamp="1607007941920">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="317" key="GridCell.Tab.0.right/0.0.1600.1160@0.0.1600.1160" timestamp="1607002837106" />
+    <state width="1556" height="390" key="GridCell.Tab.0.right/0.0.1600.1160@0.0.1600.1160" timestamp="1607007941920" />
+    <state width="1556" height="390" key="GridCell.Tab.1.bottom" timestamp="1607007941920">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1556" height="390" key="GridCell.Tab.1.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1607007941920" />
+    <state width="1556" height="390" key="GridCell.Tab.1.center" timestamp="1607007941920">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1556" height="390" key="GridCell.Tab.1.center/0.0.1600.1160@0.0.1600.1160" timestamp="1607007941920" />
+    <state width="1556" height="390" key="GridCell.Tab.1.left" timestamp="1607007941920">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1556" height="390" key="GridCell.Tab.1.left/0.0.1600.1160@0.0.1600.1160" timestamp="1607007941920" />
+    <state width="1556" height="390" key="GridCell.Tab.1.right" timestamp="1607007941920">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1556" height="390" key="GridCell.Tab.1.right/0.0.1600.1160@0.0.1600.1160" timestamp="1607007941920" />
     <state x="280" y="147" key="SettingsEditor" timestamp="1606989315391">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
     <state x="280" y="147" key="SettingsEditor/0.0.1600.1160@0.0.1600.1160" timestamp="1606989315391" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Json/ConvertClasss.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

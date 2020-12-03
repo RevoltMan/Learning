@@ -13,10 +13,6 @@ public class Figure {
         return y;
     }
 
-    public int[][] getMatrix() {
-        return matrix;
-    }
-
     public void setX(int x) {
         this.x = x;
     }
@@ -25,20 +21,44 @@ public class Figure {
         this.y = y;
     }
 
+    public void setMatrix(int[][] matrix) {
+        this.matrix = matrix;
+    }
+
+    public int[][] getMatrix() {
+        return matrix;
+    }
+
     public void left() {
 //для движения фигурки влево
+        x--;
+        if (!isCurrentPositionAvailable()) {
+            x++;       // если новое положение не доступно, то вернём старое
+        }
     }
 
     public void right() {
 //для движения фигурки вправо
+        x++;
+        if (!isCurrentPositionAvailable()) {
+            x--;       // если новое положение не доступно, то вернём старое
+        }
     }
 
     public void down() {
 //для движения фигурки вниз
+        y++;
+        if (!isCurrentPositionAvailable()) {
+            y--;       // если новое положение не доступно, то вернём старое
+        }
     }
 
     public void up() {
 //для поворота фигурки вокруг главной диагонали
+        y--;
+        if (!isCurrentPositionAvailable()) {
+            y++;       // если новое положение не доступно, то вернём старое
+        }
     }
 
     public void rotate() {

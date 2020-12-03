@@ -19,18 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62df47d2-41e8-49a9-92f0-c3aa99044cce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tetris/Field.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tetris/Figure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tetris/FigureFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tetris/KeyboardObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tetris/Tetris.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="9d18c1e8-c412-400a-8f5a-0a26332a9802" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Json/TestCat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Learning.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/tetris/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Figure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/tetris/Figure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Tetris.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/tetris/Tetris.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tetris/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tetris/Figure.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +50,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1l5qGFCHIf3lgVmwt1jnJktAV7C" />
+  <component name="ProjectId" id="1l8YTgm3T0kyawPPu4Z5Xr8wxRS" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -55,14 +63,18 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PLUGIN/JSON/jackson-databind-2.12.0-rc2.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
-    <configuration name="Tetris" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tetris.Tetris" />
+    <configuration name="TestCat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Json.TestCat" />
       <module name="Learning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tetris.*" />
+          <option name="PATTERN" value="Json.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,18 +84,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Tetris" />
+        <item itemvalue="Application.TestCat" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="62df47d2-41e8-49a9-92f0-c3aa99044cce" name="Default Changelist" comment="" />
-      <created>1606897203215</created>
+      <changelist id="9d18c1e8-c412-400a-8f5a-0a26332a9802" name="Default Changelist" comment="" />
+      <created>1606980195772</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1606897203215</updated>
+      <updated>1606980195772</updated>
     </task>
     <servers />
   </component>
@@ -97,58 +109,38 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="280" key="#com.intellij.ide.util.MemberChooser" timestamp="1606920820082">
+    <state x="605" y="280" key="#com.intellij.ide.util.MemberChooser" timestamp="1606980676029">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state x="605" y="280" key="#com.intellij.ide.util.MemberChooser/0.0.1600.1160@0.0.1600.1160" timestamp="1606920820082" />
-    <state width="1556" height="390" key="GridCell.Tab.0.bottom" timestamp="1606921299679">
+    <state x="605" y="280" key="#com.intellij.ide.util.MemberChooser/0.0.1600.1160@0.0.1600.1160" timestamp="1606980676029" />
+    <state x="506" y="314" key="FileChooserDialogImpl" timestamp="1606989309297">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="390" key="GridCell.Tab.0.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1606921299679" />
-    <state width="1556" height="390" key="GridCell.Tab.0.center" timestamp="1606921299679">
+    <state x="506" y="314" key="FileChooserDialogImpl/0.0.1600.1160@0.0.1600.1160" timestamp="1606989309297" />
+    <state width="1556" height="317" key="GridCell.Tab.0.bottom" timestamp="1607002510192">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="390" key="GridCell.Tab.0.center/0.0.1600.1160@0.0.1600.1160" timestamp="1606921299679" />
-    <state width="1556" height="390" key="GridCell.Tab.0.left" timestamp="1606921299679">
+    <state width="1556" height="317" key="GridCell.Tab.0.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1607002510192" />
+    <state width="1556" height="317" key="GridCell.Tab.0.center" timestamp="1607002510192">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="390" key="GridCell.Tab.0.left/0.0.1600.1160@0.0.1600.1160" timestamp="1606921299679" />
-    <state width="1556" height="390" key="GridCell.Tab.0.right" timestamp="1606921299679">
+    <state width="1556" height="317" key="GridCell.Tab.0.center/0.0.1600.1160@0.0.1600.1160" timestamp="1607002510192" />
+    <state width="1556" height="317" key="GridCell.Tab.0.left" timestamp="1607002510192">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="390" key="GridCell.Tab.0.right/0.0.1600.1160@0.0.1600.1160" timestamp="1606921299679" />
-    <state width="1556" height="390" key="GridCell.Tab.1.bottom" timestamp="1606921299679">
+    <state width="1556" height="317" key="GridCell.Tab.0.left/0.0.1600.1160@0.0.1600.1160" timestamp="1607002510192" />
+    <state width="1556" height="317" key="GridCell.Tab.0.right" timestamp="1607002510192">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="390" key="GridCell.Tab.1.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1606921299679" />
-    <state width="1556" height="390" key="GridCell.Tab.1.center" timestamp="1606921299679">
+    <state width="1556" height="317" key="GridCell.Tab.0.right/0.0.1600.1160@0.0.1600.1160" timestamp="1607002510192" />
+    <state x="280" y="147" key="SettingsEditor" timestamp="1606989315391">
       <screen x="0" y="0" width="1600" height="1160" />
     </state>
-    <state width="1556" height="390" key="GridCell.Tab.1.center/0.0.1600.1160@0.0.1600.1160" timestamp="1606921299679" />
-    <state width="1556" height="390" key="GridCell.Tab.1.left" timestamp="1606921299679">
-      <screen x="0" y="0" width="1600" height="1160" />
-    </state>
-    <state width="1556" height="390" key="GridCell.Tab.1.left/0.0.1600.1160@0.0.1600.1160" timestamp="1606921299679" />
-    <state width="1556" height="390" key="GridCell.Tab.1.right" timestamp="1606921299679">
-      <screen x="0" y="0" width="1600" height="1160" />
-    </state>
-    <state width="1556" height="390" key="GridCell.Tab.1.right/0.0.1600.1160@0.0.1600.1160" timestamp="1606921299679" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tetris/Field.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="280" y="147" key="SettingsEditor/0.0.1600.1160@0.0.1600.1160" timestamp="1606989315391" />
   </component>
 </project>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="764bcefe-99a2-4f1d-8ec6-b1133df2da5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Json/RealBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Json/StartTest.java" afterDir="false" />
+    <list default="true" id="192f882e-f905-4fbc-ab0a-e5e5d68dd9cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Json/zoo/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Json/zoo/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Json/zoo/Zoo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Learning/Files/CustomTree$Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Files/CustomTree$Entry.class" afterDir="false" />
@@ -16,8 +17,16 @@
       <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/ConvertClasss$Second.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/ConvertClasss$Second.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/ConvertClasss.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/ConvertClasss.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/FromFileToClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/FromFileToClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/RealBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/RealBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/StartTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/StartTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/TestCat$Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/TestCat$Cat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/TestCat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/TestCat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Motorbike.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Motorbike.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/task3305/ParkingLot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/RacingBike.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/task3305/RacingBike.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Vehicle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/tetris/Field.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Figure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/tetris/Figure.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/FigureFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Learning/tetris/FigureFactory.class" afterDir="false" />
@@ -41,14 +50,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="G:\PF(x86)\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="ProjectId" id="1lECmuH2eFB3dRfpCiiRGXTkjVh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectId" id="1lCCf5093KLgyGdLKsEyGtDzygd" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -56,35 +61,42 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PLUGIN/JSON/jackson-databind-2.12.0-rc2.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
-    <configuration name="StartTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Json.StartTest" />
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Json.zoo.Solution" />
       <module name="Learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Json.zoo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StartTest" />
+        <item itemvalue="Application.Solution" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="764bcefe-99a2-4f1d-8ec6-b1133df2da5f" name="Default Changelist" comment="" />
-      <created>1607091788882</created>
+      <changelist id="192f882e-f905-4fbc-ab0a-e5e5d68dd9cb" name="Default Changelist" comment="" />
+      <created>1607153027658</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607091788882</updated>
+      <updated>1607153027658</updated>
     </task>
     <servers />
   </component>
@@ -99,15 +111,7 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Json/task3305/Solution.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

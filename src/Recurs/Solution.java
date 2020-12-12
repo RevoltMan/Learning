@@ -48,6 +48,7 @@ public class Solution {
         solution.recurse("0.005",0); //  expected output 0.01 0 actually 0.01 0
         solution.recurse("0.0049",0); //  expected output 0 0 actually 0 0
         solution.recurse("0+0.304",0); // expected output 0.3 1 actually 0.3 1
+        solution.recurse("4^(-2)",0); // expected output 0.06 2 actually 0.06 2
     }
 
     public void recurse(final String expression, int countOperation) {
@@ -116,20 +117,72 @@ public class Solution {
  //       sTmp = sTmp.startsWith("-") ? sTmp.substring(1,sTmp.length()) : sTmp;  // Удалим лидирующий минус
         numbers = sTmp.split("[s,c,t/^,/*,//,+,/-]");  // Разделим нашу строку на массив строк, содержащих числа, указанных в разделителях по всем операциям
         int counter = 0;
-        boolean isStartMinus = false;  // т.к. у нас может быть случай с отрицательным значением градуса, то просто проверить первый символ не достаточно
-        if (sTmp.startsWith("-"))
-            isStartMinus = true;
-        else
-            if (sTmp.startsWith("t") || sTmp.startsWith("s") || sTmp.startsWith("c"))
-                if (sTmp.substring(1,2).equals("-")) {
-                    isStartMinus = true;
-                }
 
         List <Double> lNumbers= new ArrayList<Double>(numbers.length);
         for (int i = 0; i< numbers.length; i++)
             if (!numbers[i].equals(""))
                 lNumbers.add(Double.parseDouble(numbers[i]));
 
+       char ch[] = ("0+" + sTmp).toCharArray(); // Для простоты алгоритма добвалю 0+, на финальный результат не влияет :)
+
+        boolean bDigit = false;   // Следующий знак минус
+
+        for (int i=0; i< ch.length; i++) {
+            if (ch[i] == '^' || ch[i] == '*' || ch[i] == '/' || ch[i] == '+' || ch[i] == '-') {
+                // у нас есть оператор и нам нужно понять, какой именно будет следущий знак
+                if (ch[i + 1] == '-') {  // В данном случае такая проверка допустима т.к. после знака всегда должно идти число или выражение
+                    i++;
+                    switch (ch[i-1]) {
+                        case '^':
+                            commonArr.add("^");
+                            commonArr.add("-");  // Если нужно возвести в отрицательную степень, то тут я могу только показать, что степент будет отрицательна, а обработка будет позже :(
+                            break;
+                        case '*':
+                        case '/':
+                            commonArr.add("*");         // Тут я "обработаю" минус очень просто - я умножу на -1, а потом запишу основную операцию
+                            commonArr.add("-1");
+                            commonArr.add(String.valueOf(ch[i-1]));
+                            break;
+                        case '+':               // для + и - просто поменяю знак
+                            commonArr.add("-");
+                            break;
+                        case '-':
+                            commonArr.add("+");
+                            break;
+                    }
+                } else {
+                    // если после прочитанного знака идёт не "-", то задача сильно упрощается.
+                    commonArr.add(String.valueOf(ch[i])); // Мы просто запишем знак и пойдём обрабатывать следующий символ
+                }
+                bDigit = false; // Тут не число
+                continue;
+            } else if (ch[i] == 's' || ch[i] == 'c' || ch[i] == 't') { // У нас тут тригонометрия
+                commonArr.add(String.valueOf(ch[i]));  // Запишем нашу функцию
+                if (ch[i + 1] == '-') {  // В данном случае такая проверка допустима т.к. после знака всегда должно идти число или выражение
+                    commonArr.add("-");
+                    i++;        // Следующий символ обработан!
+                }
+                bDigit = false; // Тут не число
+                continue;
+            } else {
+                if (!bDigit){
+                    bDigit = true;
+                    commonArr.add(lNumbers.get(counter).toString());  // положим следущее число и увеличим счётчик чисел на 1
+                    counter++;
+                }
+            }
+
+        }
+
+/* Это кусок старого алгоритма, перепишем его поносттью!!!
+        boolean isStartMinus = false;  // т.к. у нас может быть случай с отрицательным значением градуса, то просто проверить первый символ не достаточно
+        if (sTmp.startsWith("-"))
+            isStartMinus = true;
+        else
+        if (sTmp.startsWith("t") || sTmp.startsWith("s") || sTmp.startsWith("c"))
+            if (sTmp.substring(1,2).equals("-")) {
+                isStartMinus = true;
+            }
         boolean lastOperand = false;
         boolean numericOperand = false;
         boolean thirdOperand = false;
@@ -210,7 +263,8 @@ public class Solution {
                 break;
         }
 
-        // для случая, когда подряю идут два знака
+
+         // для случая, когда подряю идут два знака
         if (commonArr.contains("")) {
             for (int i = 0; i < commonArr.size(); i++) {
                 if (commonArr.get(i).equals("")) {
@@ -225,6 +279,8 @@ public class Solution {
             }
         }
 
+ Это кусок старого алгоритма, перепишем его поносттью!!!
+*/
 
         // вычисление sin, cos, tan. Так мы задаём последовательнось операция. Вначале синусы
         if (commonArr.contains("s") || commonArr.contains("c") || commonArr.contains("t")){

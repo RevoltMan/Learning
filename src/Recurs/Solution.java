@@ -1,4 +1,4 @@
-package com.javarush.task.task34.task3404;
+package Recurs;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;

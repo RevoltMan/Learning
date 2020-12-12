@@ -1,51 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e54d89a9-b7b6-4023-ba86-bc13d5e5d069" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/xml/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/xml/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Learning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Files/CustomTree$Entry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Files/CustomTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Files/SearchFileVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Files/Sol3010.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Files/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Files/Test3202.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/ConvertClasss$First.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/ConvertClasss$Second.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/ConvertClasss.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/FromFileToClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/RealBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/StartTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/TestCat$Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/TestCat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Motorbike.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/ParkingLot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/RacingBike.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/task3305/Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/zoo/Event.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/zoo/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/zoo/Zoo$Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/zoo/Zoo$Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/zoo/Zoo$Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/Json/zoo/Zoo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Field.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Figure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/FigureFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/KeyboardObserver$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/KeyboardObserver$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/KeyboardObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Learning/tetris/Tetris.class" beforeDir="false" />
+    <list default="true" id="85d756cb-db02-4710-a905-2b7a57f1da9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lYpqEGqynCq1jFYrcRfk4MQkh8" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -53,62 +23,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../JavaRush/Plugin/JavaRushTasks/lib/istack-commons-runtime-3.0.11.jar" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.31034482" />
   </component>
-  <component name="RunManager">
-    <configuration name="Tetris" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tetris.Tetris" />
-      <module name="Learning" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Tetris" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e54d89a9-b7b6-4023-ba86-bc13d5e5d069" name="Default Changelist" comment="" />
-      <created>1607437503314</created>
+      <changelist id="85d756cb-db02-4710-a905-2b7a57f1da9d" name="Default Changelist" comment="" />
+      <created>1607784068843</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607437503314</updated>
+      <updated>1607784068843</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/xml/Solution.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

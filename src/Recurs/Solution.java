@@ -12,7 +12,7 @@ import java.util.*;
 public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
-/*        solution.recurse("sin(2*(-5+1.5*4) +  28)", 0); //expected output 0.5 6
+        solution.recurse("sin(2*(-5+1.5*4) +  28)", 0); //expected output 0.5 6
         solution.recurse("tan(2025 ^ 0.5)", 0); //expected output 1 2
         solution.recurse("10 * sin(90)", 0);     // 10 2
         solution.recurse("tan(45)",0); // expected output 1 1 actually 1 1
@@ -34,7 +34,7 @@ public class Solution {
         solution.recurse("(-1 + (-2)) ",0); // expected output -3 3 actually -3 3
         solution.recurse("-sin(2*(-5+1.5*4)+28 )",0); // expected output -0.5 7 actually -0.5 7
         solution.recurse("1-sin(-90) ", 0); // expected output 2 3 actually 2 3
-        solution.recurse("-1-sin(-90) ", 0); // expected output 0 4 actually 0 4  */
+        solution.recurse("-1-sin(-90) ", 0); // expected output 0 4 actually 0 4
         solution.recurse("sin(100)-sin(100) ", 0); // expected output 0 3 actually 0 3
         solution.recurse("-(-22+22*2)",0); // expected output -22 4 actually -22 4
         solution.recurse("-2^(-2)", 0); // expected output -0.25 3 actually 0.25 3
@@ -102,7 +102,10 @@ public class Solution {
             sTmp = sourse.substring(sourse.lastIndexOf("(") + 1);
             sTmp = sTmp.substring(0, sTmp.indexOf(")") );  // такая конструкция нужна из-за возможных вложенных скобок
         }
+        // Удалим сдвоенные знаки
         String sInternalString = sTmp;   //Получили выражение в скобках
+
+        sTmp =  DelSign (sTmp);
 
         // Заменим cos, sin, tan на одну первую букву
         while(sTmp.contains("sin") || sTmp.contains("cos") || sTmp.contains("tan")) {
@@ -112,10 +115,10 @@ public class Solution {
             sTmp = sTmp.replace("tan", "t");
         }
 
+        sTmp = "0+" + sTmp;
         // Обрабатывать будем начиная с внутренних скобок
         //"разбиение" строки на элементы (числа и мат. действия) и помещение их в commonArr
- //       sTmp = sTmp.startsWith("-") ? sTmp.substring(1,sTmp.length()) : sTmp;  // Удалим лидирующий минус
-        numbers = sTmp.split("[s,c,t/^,/*,//,+,/-]");  // Разделим нашу строку на массив строк, содержащих числа, указанных в разделителях по всем операциям
+         numbers = sTmp.split("[s,c,t/^,/*,//,+,/-]");  // Разделим нашу строку на массив строк, содержащих числа, указанных в разделителях по всем операциям
         int counter = 0;
 
         List <Double> lNumbers= new ArrayList<Double>(numbers.length);
@@ -123,7 +126,7 @@ public class Solution {
             if (!numbers[i].equals(""))
                 lNumbers.add(Double.parseDouble(numbers[i]));
 
-       char ch[] = ("0+" + sTmp).toCharArray(); // Для простоты алгоритма добвалю 0+, на финальный результат не влияет :)
+       char ch[] = (sTmp).toCharArray(); // Для простоты алгоритма добвалю 0+, на финальный результат не влияет :)
 
         boolean bDigit = false;   // Следующий знак минус
 
@@ -174,141 +177,49 @@ public class Solution {
 
         }
 
-/* Это кусок старого алгоритма, перепишем его поносттью!!!
-        boolean isStartMinus = false;  // т.к. у нас может быть случай с отрицательным значением градуса, то просто проверить первый символ не достаточно
-        if (sTmp.startsWith("-"))
-            isStartMinus = true;
-        else
-        if (sTmp.startsWith("t") || sTmp.startsWith("s") || sTmp.startsWith("c"))
-            if (sTmp.substring(1,2).equals("-")) {
-                isStartMinus = true;
-            }
-        boolean lastOperand = false;
-        boolean numericOperand = false;
-        boolean thirdOperand = false;
 
-        for (Character ch : sTmp.toCharArray()) {
-            if (lastOperand) {
-                if (  ch == '-' && thirdOperand ) {
-                    // Рассмотрим только один случай, когда полседний оператор это минус, и его нужно поставить под тригономерт функцию
-                    Double dTmp = Double.parseDouble(commonArr.get(commonArr.size() - 1));  // Тут всегда -1 не зависимо от первого знака
-                    dTmp = dTmp * (-1);
-                    commonArr.set(commonArr.size() - 1, dTmp.toString());
-                    thirdOperand = false;
-                } else {
-                    if (ch == 's' || ch == 'c' || ch == 't') {  // На предыдущем шаге мы определили, что операню последний, но мо может быть у нас ещё есть синус ...
-                        commonArr.add(String.valueOf(ch));  //Тут есть проблема, что под выраженем может быть отрицательное число!
-                        if (numericOperand)
-                            thirdOperand = true;   // Это одначает, что перед обработкрй последнего числа, мы ВОЗСОЖНО не обработали ещё один знак!
-                    }
-                    Double dTmp = lNumbers.get(counter);
-                    commonArr.add(dTmp.toString());
-                }
-                if (!thirdOperand)
-                    break;
-                else
-                    continue;
-            }
-            if (ch == '^' || ch == '*' || ch == '/' || ch == '+' || ch == '-') {
-                if (numericOperand) {// Ситуация не самая приятная, у нас два оператора идут один за другим (второй видимо минус)
-                    Double dTmp;
-                    int delta;
-                    if (isStartMinus) {
-                        delta = 1;
-                    } else {
-                        delta = 2;
-                    }
-                    dTmp = Double.parseDouble(commonArr.get(commonArr.size() - delta));
-                    dTmp = dTmp * (-1);
-                    commonArr.set(commonArr.size() - delta, dTmp.toString());
-                } else {
-                    if (isStartMinus) {
-                        commonArr.add(String.valueOf(ch));          // В исходной строке запись начинается с "-" и мы вначале пишем знак, а потом число
-                        commonArr.add(lNumbers.get(counter).toString());
-                    } else {
-                        commonArr.add(lNumbers.get(counter).toString());      // В исходной строке запись НЕ начинается с "-" и мы вначале пишем число, а потом знак
-                        commonArr.add(String.valueOf(ch));
-                    }
-                    counter++;
-                }
-                numericOperand = true;
-            } else {
-                if (ch == 's' || ch == 'c' || ch == 't') {
-                    if (numericOperand) {// Если перед функцией стоял знак, то на надо проделать операцию подобно тому, что мы делали для знаков, когда шел минус за плюсом
-                        int delta;
-                        if (isStartMinus) {
-                            delta = 1;
-                        } else {
-                            delta = 2;
-                        }
-                        commonArr.add( commonArr.size() - delta, String.valueOf(ch));
-                    } else {
-                        commonArr.add(String.valueOf(ch));  //Тут есть проблема, что под выраженем может быть отрицательное число!
-                        Double dTmp = lNumbers.get(counter) * (isStartMinus ? (int) -1 : (int) 1);
-                        commonArr.add(dTmp.toString());
-                        counter++;
-                    }
-                    numericOperand = true;
-                } else
-                numericOperand = false;
-            }
-
-            if (counter == lNumbers.size() - 1 && !isStartMinus) { //Если мы дошли до последнего числа, то его нужно отдельно записать
-                lastOperand = true;
-//                commonArr.add(lNumbers.get(counter).toString());
-//                break;
-            }
-
-            if (counter >= lNumbers.size() && !numericOperand)
-                break;
-        }
-
-
-         // для случая, когда подряю идут два знака
-        if (commonArr.contains("")) {
-            for (int i = 0; i < commonArr.size(); i++) {
-                if (commonArr.get(i).equals("")) {
-                    if (commonArr.get(i + 1).equals("-")){
-                        double r = - Double.valueOf(commonArr.get(i + 2));
-                        commonArr.set(i + 1,String.valueOf(r));
-                        commonArr.remove(i + 2);
-                    }
-                    commonArr.remove(i);
-                    i = 0;
-                }
-            }
-        }
-
- Это кусок старого алгоритма, перепишем его поносттью!!!
-*/
 
         // вычисление sin, cos, tan. Так мы задаём последовательнось операция. Вначале синусы
         if (commonArr.contains("s") || commonArr.contains("c") || commonArr.contains("t")){
             double x;
+            int sign;
             for (int i = 0; i < commonArr.size(); i++) {
+                sign = 1;
                 switch (commonArr.get(i)){
                     case "s":
+                        if (commonArr.get(i + 1).equals("-")) {
+                            sign = -1;
+                            commonArr.remove(i + 1);
+                        }
                         if (i > 0 && commonArr.get(i-1).equals("-")) {
-                            x = -Math.sin(Math.toRadians(Double.valueOf(commonArr.get(i + 1))));
-                        }else x = Math.sin(Math.toRadians(Double.valueOf(commonArr.get(i + 1))));
+                            x = -Math.sin(Math.toRadians(Double.valueOf(commonArr.get(i + 1))*sign));
+                        }else x = Math.sin(Math.toRadians(Double.valueOf(commonArr.get(i + 1))*sign));
                         commonArr.set(i, String.valueOf(x));
                         commonArr.remove(i+1);
                         commonArr.set(i, String.valueOf(x));
                         if (i > 0 && commonArr.get(i - 1).equals("-")) commonArr.remove(i - 1);
                         break;
                     case "c":
+                        if (commonArr.get(i + 1).equals("-")) {
+                            sign = -1;
+                            commonArr.remove(i + 1);
+                        }
                         if (i > 0 && commonArr.get(i - 1).equals("-")) {
-                            x = -Math.cos(Math.toRadians(Double.valueOf(commonArr.get(i + 1))));
-                        }else x = Math.cos(Math.toRadians(Double.valueOf(commonArr.get(i + 1))));
+                            x = -Math.cos(Math.toRadians(Double.valueOf(commonArr.get(i + 1))*sign));
+                        }else x = Math.cos(Math.toRadians(Double.valueOf(commonArr.get(i + 1))*sign));
                         commonArr.set(i, String.valueOf(x));
                         commonArr.remove(i + 1);
                         commonArr.set(i, String.valueOf(x));
                         if (i > 0 && commonArr.get(i - 1).equals("-")) commonArr.remove(i - 1);
                         break;
                     case "t":
+                        if (commonArr.get(i + 1).equals("-")) {
+                            sign = -1;
+                            commonArr.remove(i + 1);
+                        }
                         if (i > 0 && commonArr.get(i - 1).equals("-")) {
-                            x = -Math.tan(Math.toRadians(Double.valueOf(commonArr.get(i + 1))));
-                        }else x = Math.tan(Math.toRadians(Double.valueOf(commonArr.get(i + 1))));
+                            x = -Math.tan(Math.toRadians(Double.valueOf(commonArr.get(i + 1))*sign));
+                        }else x = Math.tan(Math.toRadians(Double.valueOf(commonArr.get(i + 1))*sign));
                         commonArr.set(i, String.valueOf(x));
                         commonArr.remove(i + 1);
                         commonArr.set(i, String.valueOf(x));
@@ -322,7 +233,13 @@ public class Solution {
         if (commonArr.contains("^")){
             for (int i = 0; i < commonArr.size(); i++) {
                 if (commonArr.get(i).equals("^")) {
-                    commonArr.set(i - 1, String.valueOf(Math.pow(Double.valueOf(commonArr.get(i - 1)),Double.valueOf(commonArr.get(i + 1)))));
+                    double power = 1;
+                    if (commonArr.get(i + 1).equals("-")) {
+                        power = (-1) ;
+                        commonArr.remove(i + 1);
+                    }
+                    power =  power * Double.valueOf(commonArr.get(i + 1));
+                    commonArr.set(i - 1, String.valueOf(Math.pow(Double.valueOf(commonArr.get(i - 1)),power)));
                     commonArr.remove(i + 1);
                     commonArr.remove(i);
                     i = 0;
@@ -383,11 +300,35 @@ public class Solution {
             sTmp = sourse.replace("(" + sInternalString + ")", String.valueOf(res));  // Заменим первое выражение в скобках, на рассчитанное
             recurse (sTmp, iCountOperation);  // и запустим ещё один цикл вычислений
         } else {
-            sTmp = new BigDecimal(res).setScale(2, RoundingMode.HALF_UP).toString();
+            sTmp = new BigDecimal(res).setScale(2, RoundingMode.HALF_UP).toString();  // Сделаем рекомендованный вариант округления
             sTmp = new DecimalFormat("#.##").format(Double.valueOf(sTmp));
             System.out.println(sTmp.replace(",", ".") + " " + iCountOperation);
             return;
         }
+    }
+
+    private String DelSign (String line) {
+        String result = "";
+        // Функцию ещё нужно разработать.
+        String tmp = line.replace("\\+","M");
+        int len = line.length();
+        while (true) {
+            tmp = tmp.replaceAll("--", "M");
+            tmp = tmp.replaceAll("MM", "M");
+            tmp = tmp.replaceAll("\\(M", "\\(");
+            tmp = tmp.replaceAll("\\^M", "^");
+            tmp = tmp.replaceAll("M-", "-");
+            tmp = tmp.replaceAll("-M", "-");
+            if (tmp.length() < len) {
+                len = tmp.length();
+            } else
+                break;
+        }
+        if (tmp.startsWith("M"))
+            tmp = tmp.substring(1);
+        result = tmp.replaceAll("M", "\\+");
+
+        return result;
     }
 
     public Solution() {
